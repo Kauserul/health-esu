@@ -1,0 +1,10 @@
+
+.exercise-time{
+    background-color: rgb(209, 209, 209);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}

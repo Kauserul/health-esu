@@ -2,6 +2,9 @@ import React from 'react';
 import './Machins.css';
 import logo from '../../image/ABS.png';
 import SingleMachin from '../SingelMachins/SingleMachin';
+import Personal from '../PersonalInformation/Personal';
+import AddToBreack from '../AddToBreak/AddToBreack';
+import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 
 const Machins = () => {
     console.log(logo)
@@ -17,7 +20,7 @@ const Machins = () => {
     return (
         <div className='machins'>
             <div className='display-machins'>
-                <h1>UTRA-Active-club</h1>
+                <h1 className='site-name'>UTRA-Active-club</h1>
                 <h3>Select today’s exercise</h3>
                 
                 <div className='all-machins'>
@@ -28,7 +31,10 @@ const Machins = () => {
                 
             </div>
             <div className='display-duration'>
-                
+                <Personal></Personal>
+                <AddToBreack></AddToBreack>
+                <ExerciseDetails></ExerciseDetails>
+                <button className='completed'>Activity Completed</button>
             </div>
         </div>
     );

@@ -1,0 +1,15 @@
+
+
+.break-time{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+}
+
+.break-time p{
+    background-color: white;
+    padding: 4px;
+    border-radius: 100%;
+    cursor: pointer;
+}
