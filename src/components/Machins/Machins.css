@@ -1,0 +1,15 @@
+
+.all-machins{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.machins{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.display-duration{
+    background-color: aliceblue;
+}

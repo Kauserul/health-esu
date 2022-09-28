@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Machins from './components/Machins/Machins';
 
 function App() {
   return (
-    <div className="App">
-      <h1>I can do that</h1>
+    <div>
+      {/* <Header> </Header> */}
+      <Machins></Machins>
     </div>
   );
 }
