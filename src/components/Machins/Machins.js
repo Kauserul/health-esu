@@ -6,11 +6,9 @@ import AddToBreack from '../AddToBreak/AddToBreack';
 import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
-import { type } from '@testing-library/user-event/dist/type';
 import Swal from 'sweetalert2'
 
-const Machins = () => {
-    
+const Machins = () => {   
     const [machins, setMachins] = useState([]);
     const [time, setTime] = useState([0]);
     const [breack, setBreak] = useState([0]);
@@ -33,7 +31,6 @@ const Machins = () => {
     const handelAddToBreak = (clicked) =>{
         const newArr = clicked;
         setBreak(newArr)
-        console.log(newArr)
     }
 
     const handelAddToCompleted = () =>{
@@ -44,7 +41,6 @@ const Machins = () => {
           )
     }
     
-
     return (
         <div className='machins'>
             <div className='display-machins mt-4'>
@@ -57,8 +53,7 @@ const Machins = () => {
                     {
                         machins.map(machin => <SingleMachin 
                             machin={machin}
-                            handelAddToList = {handelAddToList}
-                            
+                            handelAddToList = {handelAddToList}                          
                             key = {machin.id}
                             ></SingleMachin>)
                     }
