@@ -5,7 +5,7 @@ const AddToBreack = (props) => {
     const {handelAddToBreak} = props
     
     return (
-        <div className='break'>
+        <div className='break mt-4'>
             <h3>Add A Break</h3>
             <div className='break-time'>
                 <button onClick={()=>handelAddToBreak(10)}>10</button>

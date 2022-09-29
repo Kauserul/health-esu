@@ -38,13 +38,12 @@ const Machins = () => {
 
     return (
         <div className='machins'>
-            <div className='display-machins'>
+            <div className='display-machins mt-4'>
                 <h1 className='site-name'>
                 <FontAwesomeIcon className='dumbbell' icon={faDumbbell} />
                       Fitness Heroes.
                     </h1>
-                <h3>Select today’s exercise</h3>
-                
+                <h3>Select today’s exercise</h3>          
                 <div className='all-machins'>
                     {
                         machins.map(machin => <SingleMachin 
@@ -57,25 +56,24 @@ const Machins = () => {
                 </div>
                 
             </div>
-            <div className='display-duration'>
+            <div className='display-duration p-3'>
                 <Personal></Personal>
                 <AddToBreack handelAddToBreak = {handelAddToBreak}></AddToBreack>
+                <div className='mt-4'>
+                    <div className='details'>
+                        <h3>Exercise Details</h3>
+                    <div className='exercise-time p-2 d-flex justify-content-between align-items-center'>
+                        <h4>Exercise time</h4>
+                        <p>{time}m</p>
+                    </div>
 
-
-
-                <div className='details'>
-            <h3>Exercise Details</h3>
-            <div className='exercise-time'>
-                <h4>Exercise time</h4>
-                <p>{time}m</p>
-            </div>
-
-            <div className='exercise-time'>
-                <h4>Break time</h4>
-                <p>{breack}m</p>
-            </div>
-        </div>
-                <button className='completed'>Activity Completed</button>
+                    <div className='exercise-time p-2'>
+                        <h4>Break time</h4>
+                        <p>{breack}m</p>
+                    </div>
+                    </div>
+                        <button className='completed'>Activity Completed</button>
+                    </div>
             </div>
         </div>
     );
