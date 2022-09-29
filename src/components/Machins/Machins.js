@@ -5,6 +5,8 @@ import SingleMachin from '../SingelMachins/SingleMachin';
 import Personal from '../PersonalInformation/Personal';
 import AddToBreack from '../AddToBreak/AddToBreack';
 import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 
 const Machins = () => {
     
@@ -25,7 +27,10 @@ const Machins = () => {
     return (
         <div className='machins'>
             <div className='display-machins'>
-                <h1 className='site-name'>UTRA-Active-club</h1>
+                <h1 className='site-name'>
+                <FontAwesomeIcon className='dumbbell' icon={faDumbbell} />
+                      Fitness Heroes.
+                    </h1>
                 <h3>Select today’s exercise</h3>
                 
                 <div className='all-machins'>
