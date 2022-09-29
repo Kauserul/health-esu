@@ -7,6 +7,7 @@ import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { type } from '@testing-library/user-event/dist/type';
+import Swal from 'sweetalert2'
 
 const Machins = () => {
     
@@ -33,6 +34,14 @@ const Machins = () => {
         const newArr = clicked;
         setBreak(newArr)
         console.log(newArr)
+    }
+
+    const handelAddToCompleted = () =>{
+        Swal.fire(
+            'Good job!',
+            'You Completed The Work!',
+            'success'
+          )
     }
     
 
@@ -72,7 +81,7 @@ const Machins = () => {
                         <p>{breack}m</p>
                     </div>
                     </div>
-                        <button className='completed'>Activity Completed</button>
+                        <button onClick={() => handelAddToCompleted()} className='completed'>Activity Completed</button>
                     </div>
             </div>
         </div>
