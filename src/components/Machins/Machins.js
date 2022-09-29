@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './Machins.css';
-import logo from '../../image/ABS.png';
 import SingleMachin from '../SingelMachins/SingleMachin';
 import Personal from '../PersonalInformation/Personal';
 import AddToBreack from '../AddToBreak/AddToBreack';
 import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+import { type } from '@testing-library/user-event/dist/type';
 
 const Machins = () => {
     
-    const [machins, setMachins] = useState([])
-    const [time, setTime] = useState([0])
+    const [machins, setMachins] = useState([]);
+    const [time, setTime] = useState([0]);
+    const [breack, setBreak] = useState([0]);
 
     useEffect( () =>{
         fetch('faceDb.json')
@@ -20,9 +21,20 @@ const Machins = () => {
     } , [])
 
     const handelAddToList = (clicked) =>{
-        const newArr = [...time, clicked];
-        setTime(newArr)
+        const newArr = parseInt(time);
+        const clickTime = clicked.time;
+        const totalTime = newArr + clickTime
+        console.log(typeof newArr)
+        console.log(typeof clickTime)
+        setTime(totalTime)
     }
+
+    const handelAddToBreak = (clicked) =>{
+        const newArr = clicked;
+        setBreak(newArr)
+        console.log(newArr)
+    }
+    
 
     return (
         <div className='machins'>
@@ -38,6 +50,7 @@ const Machins = () => {
                         machins.map(machin => <SingleMachin 
                             machin={machin}
                             handelAddToList = {handelAddToList}
+                            
                             key = {machin.id}
                             ></SingleMachin>)
                     }
@@ -46,7 +59,7 @@ const Machins = () => {
             </div>
             <div className='display-duration'>
                 <Personal></Personal>
-                <AddToBreack></AddToBreack>
+                <AddToBreack handelAddToBreak = {handelAddToBreak}></AddToBreack>
 
 
 
@@ -59,7 +72,7 @@ const Machins = () => {
 
             <div className='exercise-time'>
                 <h4>Break time</h4>
-                <p>00m</p>
+                <p>{breack}m</p>
             </div>
         </div>
                 <button className='completed'>Activity Completed</button>

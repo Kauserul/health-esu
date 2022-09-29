@@ -8,11 +8,12 @@
     padding: 10px;
 }
 
-.break-time li{
+.break-time button{
     background-color: white;
-    padding: 4px;
+    padding: 8px;
     border-radius: 100%;
     cursor: pointer;
     list-style: none;
     margin-right: 2px;
+    border: none;
 }

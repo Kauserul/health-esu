@@ -1,15 +1,18 @@
 import React from 'react';
 import './AddToBreak.css'
 
-const AddToBreack = () => {
-    const breackTimes = [10, 20, 30, 40]
+const AddToBreack = (props) => {
+    const {handelAddToBreak} = props
+    
     return (
         <div className='break'>
             <h3>Add A Break</h3>
             <div className='break-time'>
-                {
-                    breackTimes.map(breackTime => <li>{breackTime}m</li>)
-                }
+                <button onClick={()=>handelAddToBreak(10)}>10</button>
+                <button onClick={()=>handelAddToBreak(20)}>20</button>
+                <button onClick={()=>handelAddToBreak(30)}>30</button>
+                <button onClick={()=>handelAddToBreak(40)}>40</button>
+                
             </div>
         </div>
     );

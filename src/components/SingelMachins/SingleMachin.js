@@ -3,7 +3,7 @@ import './SingelMachin.css'
 
 const SingleMachin = (props) => {
     const {handelAddToList} = props
-    const {img, name, id, time, des, age} = props.machin
+    const {img, name, id, time, des, age} = props.machin;
     return (
         <div className='machin'>
             <img src={img} alt="" />
@@ -13,7 +13,7 @@ const SingleMachin = (props) => {
                 <p>For age : <strong>{age}</strong></p>
                 <p>Time required : <strong>{time}m</strong></p>
             </div>
-            <button onClick={() => handelAddToList(time)} className='btn-add'>Add to list</button>
+            <button onClick={() => handelAddToList(props.machin)} className='btn-add'>Add to list</button>
         </div>
     );
 };
