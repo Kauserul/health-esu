@@ -1,7 +1,9 @@
 import React from 'react';
 import './ExerciseDetails.css'
 
-const ExerciseDetails = () => {
+const ExerciseDetails = (props) => {
+    const {handelAddTOList} = props;
+    console.log(handelAddTOList)
     return (
         <div className='details'>
             <h3>Exercise Details</h3>

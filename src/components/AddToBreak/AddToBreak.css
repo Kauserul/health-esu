@@ -5,11 +5,14 @@
     justify-content: space-evenly;
     background-color: rgb(207, 207, 207);
     border-radius: 10px;
+    padding: 10px;
 }
 
-.break-time p{
+.break-time li{
     background-color: white;
     padding: 4px;
     border-radius: 100%;
     cursor: pointer;
+    list-style: none;
+    margin-right: 2px;
 }
