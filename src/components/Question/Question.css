@@ -1,0 +1,12 @@
+.all-question{
+    display: flex;
+    padding: 50px;
+    gap: 15px;
+}
+
+.single-question{
+    /* border: 1px solid gray; */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px gray;
+}
