@@ -72,13 +72,13 @@ const Machins = () => {
                     <div className='details'>
                         <h3>Exercise Details</h3>
                     <div className='exercise-time p-2 d-flex justify-content-between align-items-center'>
-                        <h4>Exercise time</h4>
-                        <p>{time}m</p>
+                        <h5>Exercise time</h5>
+                        <p>{time} <small>minutes</small></p>
                     </div>
 
                     <div className='exercise-time p-2'>
-                        <h4>Break time</h4>
-                        <p>{breack}m</p>
+                        <h5>Break time</h5>
+                        <p>{breack} <small>minutes</small></p>
                     </div>
                     </div>
                         <button onClick={() => handelAddToCompleted()} className='completed'>Activity Completed</button>

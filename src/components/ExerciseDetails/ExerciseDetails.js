@@ -8,7 +8,7 @@ const ExerciseDetails = (props) => {
         <div className='details'>
             <h3>Exercise Details</h3>
             <div className='exercise-time'>
-                <h4>Exercise time</h4>
+                <p>Exercise time</p>
                 <p>00m</p>
             </div>
 
